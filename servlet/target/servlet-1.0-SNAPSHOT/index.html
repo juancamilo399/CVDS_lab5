@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+
+<head>
 <script>
 function validate() {
   var x;
@@ -12,13 +14,14 @@ function validate() {
     alert("Debe ingresar un numero");
     return false;
 }
+}
 </script>
-    <head>
         <title>Start Page</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <form  name="Input" action="/ejemploServlet" onsubmit="return validate()" method="post">
+	<h1>Hello World!</h1>
+        <form  name="Input" action="/ejemploServlet" onsubmit="return validate()" method="POST">
 Id: <input type="int" name="id" value="1"><br>	
 	<input type="submit" value="Submit">
 </form>
