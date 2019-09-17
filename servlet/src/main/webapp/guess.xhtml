@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3c.org/1999/xhtml"
-xmlns:h="http://xmlns.jcp.org/jsf/html"
-xmlns:p="http://primefaces.org/ui">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
 <h:head>  </h:head>
 
 
 <h:body>
 <h:form id="guess_form">
-	<p:outputLabel value="#{guessBean.numberToGuess}"  style="display:none" />
-	<p:inputText binding="#{input}" />
-	<br>Numero de intentos :<p:outputLabel value="#{guessBean.numeroIntentos}"/></br>
+	<br>ingresa un numero entre 0 y 100 </br>
+	<p:outputLabel value="#{guessBean.numberToGuess}" style="display:none" />
+	<p:inputText id= "playerNumber" binding="#{input}" >
+		<f:validateLongRange  minimum="0" maximum="100" />
+	</p:inputText>
+	<h:message for = "playerNumber" style="color:red;margin:8px;" />
 	<br><p:outputLabel value="#{guessBean.estado}"/></br>
+	<br>Numero de intentos :<p:outputLabel value="#{guessBean.numeroIntentos}"/></br>
 	<br>Premio acumulado: <p:outputLabel value="#{guessBean.acumulado}"/></br>
 	<p:commandButton value="Enviar intento" update="guess_form" actionListener="#{guessBean.guess(input.value)}"/>
 	<p:commandButton value="Reiniciar" update="guess_form" actionListener="#{guessBean.restart()}"/>
-	<p:dataTable var="intento" value="#{guessBean.intentos}">
-	<p:column headerText="#Intento">
-		<h:outputText value= "#{guessBean.intentos.indexOf(intento)+1}"/>
+	<br> </br>
+	<p:dataTable var="intento" value="#{guessBean.intentos}" style="width:250px;">
+	<p:column headerText="#Intento" >
+		<h:outputText value= "#{guessBean.intentos.indexOf(intento)+1}" />
 	</p:column>
-	<p:column headerText=" Valor Intento">
-		<h:outputText value= "#{intento}"/>
+	<p:column headerText="Valor Intento"  >
+		<h:outputText value= "#{intento}" />
 	</p:column>
 	</p:dataTable>
 </h:form>
