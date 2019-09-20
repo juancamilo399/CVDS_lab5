@@ -2,28 +2,33 @@
 <html>
 
 <head>
-<script>
-function validate() {
-  var x;
+	<title>Start Page</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script>
+	function validate() {
+	  var x;
 
-  // Get the value of the input field with id="numb"
-  x = document.forms["Input"]["id"].value;
+	  // Get the value of the input field with id="numb"
+	  x = document.forms["Input"]["id"].value;
 
-  // If x is Not a Number or less than one or greater than 10
-  if (isNaN(x) ) {
-    alert("Debe ingresar un numero");
-    return false;
-}
-}
-</script>
-        <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
-	<h1>Hello World!</h1>
-        <form  name="Input" action="/ejemploServlet" onsubmit="return validate()" method="POST">
-Id: <input type="int" name="id" value="1"><br>	
+	  // If x is Not a Number or less than one or greater than 10
+	  if (isNaN(x) ) {
+		alert("Debe ingresar un numero");
+		return false;
+		}
+	}
+	</script>
+	<link rel="stylesheet" type="text/css" href="styleSample.css">
+	
+        
+ </head>
+<body>
+	<h1>Bienvenido</h1>
+    <form  name="Input" action="/ejemploServlet" onsubmit="return validate()" method="POST">
+		<br> <label for="id">Ingresa el id a buscar</label></br>
+		<input type="int" id="id" name="id" value=1 >
+	<br> </br>
 	<input type="submit" value="Submit">
-</form>
-    </body>
+	</form>
+</body>
 </html>

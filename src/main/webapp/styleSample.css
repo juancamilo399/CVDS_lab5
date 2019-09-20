@@ -1,0 +1,51 @@
+h1 {
+	color: white;
+	text-align: center;
+}
+
+form {
+    margin-left: 45%;
+    margin-right:45%;
+    width: 50%;
+}
+
+input[type=int]{
+	width: 18%;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	background-color: white;
+	background-image: url('i.png');
+	background-position: 3px 1px; 
+	background-repeat: no-repeat;
+	margin: 4px 0px;
+	padding: 6px 20px 12px 40px;
+	outline: none;
+}
+/*
+input[type=int]:focus{
+	
+	border: 3px solid #555;
+	
+	
+}*/
+
+input[type=submit] {
+  background-color: rgb(0, 204, 204);
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  text-decoration: none;
+  margin: 4px 24px;
+  cursor: pointer;
+}
+
+body{
+	background-image: url("f1.png");
+	background-size: cover;
+	background-repeat: repeat-y;
+}
+
+
+

@@ -3,24 +3,38 @@
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
     xmlns:p="http://primefaces.org/ui">
-<h:head>  </h:head>
+<h:head> 
+	<link rel="stylesheet" type="text/css" href="styleGuess.css" />
+
+ </h:head>
 
 
 <h:body>
+
+	<img src="logo.png" alt="logo" >
+	</img>
+
 <h:form id="guess_form">
-	<br>ingresa un numero entre 0 y 100 </br>
+	
+	<br> <label class="principal" for="number">ingresa un numero entre 0 y 100</label></br>
 	<p:outputLabel value="#{guessBean.numberToGuess}" style="display:none" />
-	<p:inputText id= "playerNumber" binding="#{input}" >
+	<p:inputText  id= "playerNumber" type="int" binding="#{input}" >
 		<f:validateLongRange  minimum="0" maximum="100" />
 	</p:inputText>
 	<h:message for = "playerNumber" style="color:red;margin:8px;" />
-	<br><p:outputLabel value="#{guessBean.estado}"/></br>
-	<br>Numero de intentos :<p:outputLabel value="#{guessBean.numeroIntentos}"/></br>
-	<br>Premio acumulado: <p:outputLabel value="#{guessBean.acumulado}"/></br>
-	<p:commandButton value="Enviar intento" update="guess_form" actionListener="#{guessBean.guess(input.value)}"/>
-	<p:commandButton value="Reiniciar" update="guess_form" actionListener="#{guessBean.restart()}"/>
+	 
+	<br> <p:outputLabel class="estado" value="#{guessBean.estado}"/></br>
+	
+	<br> <p:outputLabel  class="intentos" value="Numero de intentos: " /> <p:outputLabel  class="nintentos" value="#{guessBean.numeroIntentos}" /></br>
+	
+	<br> <p:outputLabel  class="premio" value="Premio acumulado: " /> <p:outputLabel class="npremio" value="#{guessBean.acumulado}"/> </br>
+	
+	
+	<p:commandButton value="Enviar intento" update="guess_form" actionListener="#{guessBean.guess(input.value)}" styleClass="Button" />
+	<p:commandButton value="Reiniciar" update="guess_form" actionListener="#{guessBean.restart()}" styleClass="Button" />
+	
 	<br> </br>
-	<p:dataTable var="intento" value="#{guessBean.intentos}" style="width:250px;">
+	<p:dataTable var="intento" value="#{guessBean.intentos}" style="width:250px;" styleClass = "Table">
 	<p:column headerText="#Intento" >
 		<h:outputText value= "#{guessBean.intentos.indexOf(intento)+1}" />
 	</p:column>

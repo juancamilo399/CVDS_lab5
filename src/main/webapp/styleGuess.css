@@ -1,0 +1,78 @@
+
+/*body{
+	
+	background-image: url("f1.png");
+	background-size: cover;
+	background-repeat: repeat-y;
+}*/
+form {
+    margin-left: 43%;
+    margin-right: 45%;
+    width: 50%;
+	position: absolute;
+	top: 250px;
+}
+
+input[type=int]{
+	width: 12%;
+	text-align: center;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 18px;
+	background-color: white;
+	margin: 9px 66px;
+	padding: 8px 6px 8px 6px;
+	outline: none;
+}
+label.principal{
+	font-size: 20px;	
+}
+
+label.estado{
+	font-size: 18px;
+	margin: 4px 60px;	
+}
+
+label.intentos{
+	font-size: 18px;
+	width: 10em; 
+	margin-left: 30px
+}
+
+label.premio{
+	
+	font-size: 18px;
+	width: 10em; 
+	margin-left: 30px
+	
+}
+
+.Button  {
+	background-color: rgb(0, 204, 204);
+	border: none;
+	color: white;
+	text-decoration: none;
+	margin-top: 12px;
+	cursor: pointer;
+}
+
+.Table{
+	position: absolute;
+	right: 60px;
+	top: 50px;
+}
+body{
+	background-image: url("f2.png");
+	background-size: cover;
+	background-repeat: repeat-y;
+}
+
+img{
+	margin-left: 37%;
+    margin-right: 45%;
+	
+	position: absolute;
+	
+	top: 10px;
+}
