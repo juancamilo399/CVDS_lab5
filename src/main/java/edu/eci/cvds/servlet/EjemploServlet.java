@@ -73,7 +73,7 @@ public class EjemploServlet extends HttpServlet{
 	}
 	catch(FileNotFoundException e){
 		resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-		 responseWriter.write(NotFoundMessage());
+		 responseWriter.write(notFoundMessage());
 	}
 	catch(MalformedURLException e){
 	resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);	
