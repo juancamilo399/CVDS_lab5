@@ -7,9 +7,7 @@ private int id;
 private String title;
 private boolean completed;
 
-	public Todo(){
 
-	}
 
 	public int getUserId(){
 		return userId;

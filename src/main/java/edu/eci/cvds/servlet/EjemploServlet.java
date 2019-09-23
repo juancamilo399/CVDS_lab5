@@ -88,7 +88,7 @@ public class EjemploServlet extends HttpServlet{
    }
 	   
 	
-   private String NotFoundMessage(){
+   private String notFoundMessage(){
 	  String mensaje="<!DOCTYPE html> <html> <head> <title>Start Page</title></head><body><h1>No existe un item con el identificador dado</h1></body></html>";
 	  return mensaje; 
 	 
